@@ -18,10 +18,10 @@ password: heslo
 
 ## Configuration
 
-Change URL to you GTD_BP REST Api:
-Package: cz.slama.android.gtd.core
-Class: Constants.Http
-Change URL_BASE
+Change URL to you GTD_BP REST Api:<br/>
+Package: cz.slama.android.gtd.core<br/>
+Class: Constants.Http<br/>
+Change URL_BASE<br/>
 Example of value : "http://10.0.3.2:8080/gtd/api/v1"; --its for local development from Genymotion emulator
 
 ## Base layout
@@ -34,7 +34,7 @@ on [AndroidBootstrap.com](http://www.androidbootstrap.com).
 * [Apache Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 
-Copyright 2014 Michal Sláma
+Copyright 2014 Michal Sláma<br/>
 Copyright 2014 GitHub Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
