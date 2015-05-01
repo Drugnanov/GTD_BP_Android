@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:paddingBottom="5dp"
+      android:paddingLeft="10dp"
+      android:paddingRight="10dp"
+      android:paddingTop="5dp">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:color="@color/table_text_selector"
+                 android:layout_margin="20dp">
+      <View
+          android:layout_width="fill_parent"
+          android:layout_height="match_parent"
+          android:background="@drawable/rectangle"/>
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:background="@drawable/edit_text_background"
+          android:layout_margin="2dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/google_title"
+            android:textColor="@color/table_text_selector"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+
+            >
+
+          <com.google.android.gms.common.SignInButton
+              android:id="@+id/b_google_login_button"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="30dp"
+              android:layout_marginBottom="30dp"/>
+
+          <Button
+              android:id="@+id/b_google_logout_button"
+              style="@style/ShadowText"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:minHeight="0dp"
+              android:minWidth="0dp"
+              android:padding="5dp"
+              android:layout_margin="5dp"
+              android:layout_marginBottom="10dp"
+              android:background="@drawable/button_delete_background_states"
+              android:onClick="handleGoogleLogout"
+              android:layout_gravity="center_horizontal"
+              android:text="@string/label_google_logout"
+              android:textColor="@color/text"
+              android:textSize="12sp"
+              android:textStyle="bold"
+              />
+
+          <!--<Button-->
+              <!--android:id="@+id/b_google_refresh_token_button"-->
+              <!--style="@style/ShadowText"-->
+              <!--android:layout_width="wrap_content"-->
+              <!--android:layout_height="wrap_content"-->
+              <!--android:minHeight="0dp"-->
+              <!--android:minWidth="0dp"-->
+              <!--android:padding="5dp"-->
+              <!--android:layout_margin="5dp"-->
+              <!--android:background="@drawable/button_background_states"-->
+              <!--android:onClick="handleGoogleRefreshToken"-->
+              <!--android:layout_gravity="center_horizontal"-->
+              <!--android:text="@string/label_google_refresh_token"-->
+              <!--android:textColor="@color/text"-->
+              <!--android:textSize="12sp"-->
+              <!--android:textStyle="bold"-->
+              <!--/>-->
+
+        </LinearLayout>
+      </RelativeLayout>
+    </FrameLayout>
+  </LinearLayout>
+</ScrollView>

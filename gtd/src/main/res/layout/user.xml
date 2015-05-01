@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:paddingBottom="5dp"
+      android:paddingLeft="10dp"
+      android:paddingRight="10dp"
+      android:paddingTop="5dp">
+
+    <!--title-->
+    <TextView
+        android:id="@+id/tv_user_username"
+        style="@style/EditTextLabel"
+        android:text="@string/user_username"/>
+
+    <EditText
+        android:id="@+id/et_user_username"
+        style="@style/RequiredEditText"
+        android:imeOptions="actionDone"
+        android:inputType="text"/>
+
+    <!--password-->
+    <TextView
+        android:id="@+id/tv_user_password"
+        style="@style/EditTextLabel"
+        android:text="@string/user_password"/>
+
+    <EditText
+        android:id="@+id/et_user_password"
+        style="@style/EditText"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"/>
+
+    <!--password check-->
+    <TextView
+        android:id="@+id/tv_user_password_check"
+        style="@style/EditTextLabel"
+        android:text="@string/user_password_check"/>
+
+    <EditText
+        android:id="@+id/et_user_password_check"
+        style="@style/EditText"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"/>
+
+    <!--Person name-->
+    <TextView
+        android:id="@+id/tv_user_person_name"
+        style="@style/EditTextLabel"
+        android:text="@string/user_person_name"/>
+
+    <EditText
+        android:id="@+id/et_user_person_name"
+        style="@style/EditText"
+        android:lines="3"
+        android:inputType="text"/>
+
+    <!--Person surname-->
+    <TextView
+        android:id="@+id/tv_user_person_surname"
+        style="@style/EditTextLabel"
+        android:text="@string/user_person_surname"/>
+
+    <EditText
+        android:id="@+id/et_user_person_surname"
+        style="@style/EditText"
+        android:lines="3"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/b_user_update"
+        style="@style/ShadowText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_background_states"
+        android:onClick="handleAction"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/label_user_update"
+        android:textColor="@color/text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+  </LinearLayout>
+</ScrollView>

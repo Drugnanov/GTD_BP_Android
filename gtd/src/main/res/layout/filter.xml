@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:paddingBottom="5dp"
+      android:paddingLeft="10dp"
+      android:paddingRight="10dp"
+      android:paddingTop="5dp">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:color="@color/table_text_selector"
+                 android:layout_margin="20dp">
+      <View
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:background="@drawable/rectangle"/>
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:background="@drawable/edit_text_background"
+          android:layout_margin="2dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/filter_project"
+            android:textColor="@color/table_text_selector"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="10dp">
+          <CheckBox android:id="@+id/cb_filter_project_show_active"
+                    style="@style/Checkbox"
+                    android:button="@drawable/apptheme_btn_check_holo_light"
+                    android:text="@string/label_filter_project_show_active"
+              />
+
+          <CheckBox android:id="@+id/cb_filter_project_show_done"
+                    style="@style/Checkbox"
+                    android:button="@drawable/apptheme_btn_check_holo_light"
+                    android:text="@string/label_filter_project_show_done"
+              />
+        </LinearLayout>
+      </RelativeLayout>
+
+    </FrameLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:color="@color/table_text_selector"
+                 android:layout_margin="20dp">
+      <View
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:background="@drawable/rectangle"/>
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:background="@drawable/edit_text_background"
+          android:layout_margin="2dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/filter_task"
+            android:textColor="@color/table_text_selector"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="10dp">
+          <CheckBox android:id="@+id/cb_filter_task_show_created"
+                    style="@style/Checkbox"
+                    android:button="@drawable/apptheme_btn_check_holo_light"
+                    android:text="@string/label_filter_task_show_created"
+              />
+
+          <CheckBox android:id="@+id/cb_filter_task_show_active"
+                    style="@style/Checkbox"
+                    android:button="@drawable/apptheme_btn_check_holo_light"
+                    android:text="@string/label_filter_task_show_active"
+              />
+
+          <CheckBox android:id="@+id/cb_filter_task_show_in_calendar"
+                    style="@style/Checkbox"
+                    android:button="@drawable/apptheme_btn_check_holo_light"
+                    android:text="@string/label_filter_task_show_in_calendar"
+              />
+
+          <CheckBox android:id="@+id/cb_filter_task_show_done"
+                    style="@style/Checkbox"
+                    android:button="@drawable/apptheme_btn_check_holo_light"
+                    android:text="@string/label_filter_task_show_done"
+              />
+        </LinearLayout>
+      </RelativeLayout>
+
+    </FrameLayout>
+
+  </LinearLayout>
+</ScrollView>

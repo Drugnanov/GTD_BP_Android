@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:paddingBottom="5dp"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+              android:paddingTop="5dp">
+
+  <RelativeLayout
+      android:id="@+id/relativeLayout1"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_column"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/table_text_header"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"/>
+
+    <Button
+        android:id="@+id/b_task_create_show"
+        style="@style/ShadowText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:padding="3dp"
+        android:text="@string/label_task_project"
+        android:textColor="@color/text"
+        android:background="@drawable/button_background_states"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        />
+    <!--android:paddingLeft="3dp"--><!--android:paddingRight="3dp"-->
+  </RelativeLayout>
+</LinearLayout>

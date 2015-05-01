@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:paddingBottom="5dp"
+      android:paddingLeft="10dp"
+      android:paddingRight="10dp"
+      android:paddingTop="5dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+      <Button
+          android:id="@+id/b_task_fast_done"
+          style="@style/ShadowText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:minHeight="0dp"
+          android:minWidth="0dp"
+          android:padding="3dp"
+          android:text="@string/label_task_fast_done"
+          android:textColor="@color/text"
+          android:onClick="handleFastDone"
+          android:background="@drawable/button_background_states"
+          android:textAppearance="?android:attr/textAppearanceSmall"
+          android:textStyle="bold"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          />
+    </RelativeLayout>
+
+    <!--title-->
+    <TextView
+        android:id="@+id/tv_task_name"
+        style="@style/EditTextLabel"
+        android:text="@string/task_title"/>
+
+    <EditText
+        android:id="@+id/et_task_name"
+        style="@style/RequiredEditText"
+        android:imeOptions="actionDone"
+        android:inputType="text"/>
+
+    <!--description-->
+    <TextView
+        android:id="@+id/tv_task_description"
+        style="@style/EditTextLabel"
+        android:text="@string/task_description"/>
+
+    <EditText
+        android:id="@+id/et_task_description"
+        style="@style/EditText"
+        android:imeOptions="actionDone"
+        android:inputType="text"/>
+
+    <!--parent-->
+    <TextView
+        android:id="@+id/tv_task_parent"
+        style="@style/EditTextLabel"
+        android:text="@string/project_project_parent"/>
+
+    <Spinner
+        android:id="@+id/sp_task_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <!--state-->
+    <TextView
+        android:id="@+id/tv_task_state"
+        style="@style/EditTextLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/project_state"/>
+
+    <Spinner
+        android:id="@+id/sp_task_state"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <!--Context-->
+    <TextView
+        android:id="@+id/tv_task_context"
+        style="@style/EditTextLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/project_context"/>
+
+    <Spinner
+        android:id="@+id/sp_task_context"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <!--date from-->
+    <TextView
+        android:id="@+id/tv_task_date_from"
+        style="@style/EditTextLabel"
+        android:text="@string/task_date_from"/>
+
+    <EditText
+        android:id="@+id/et_task_date_from"
+        style="@style/RequiredEditText"
+        android:imeOptions="actionDone"
+        android:inputType="datetime"
+        android:focusable="false"/>
+
+    <!--date to-->
+    <TextView
+        android:id="@+id/tv_task_date_to"
+        style="@style/EditTextLabel"
+        android:text="@string/task_date_to"/>
+
+    <EditText
+        android:id="@+id/et_task_date_to"
+        style="@style/RequiredEditText"
+        android:imeOptions="actionDone"
+        android:inputType="datetime"
+        android:focusable="false"/>
+
+    <!--Note-->
+    <TextView
+        android:id="@+id/tv_task_note"
+        style="@style/EditTextLabel"
+        android:text="@string/task_note"/>
+
+    <EditText
+        android:id="@+id/et_task_note"
+        style="@style/EditText"
+        android:lines="3"
+        android:inputType="text"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        style="@style/EditTextLabel"
+        android:text="@string/project_structure"/>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:color="@color/table_text_selector"
+                 android:layout_margin="20dp">
+      <View
+          android:layout_width="fill_parent"
+          android:layout_height="match_parent"
+          android:background="@drawable/rectangle"/>
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:background="@drawable/edit_text_background"
+          android:layout_margin="2dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/task_parent"
+            android:textColor="@color/table_text_selector"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+          <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/task_parent_project_listview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+      </RelativeLayout>
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:id="@+id/b_task_create"
+        style="@style/ShadowText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_background_states"
+        android:onClick="handleAction"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/label_task_create"
+        android:textColor="@color/text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_post_social"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentLeft="true"
+          android:layout_marginTop="15dp"
+          >
+
+        <TextView
+            android:id="@+id/tv_task_social_post"
+            style="@style/NormalLabel"
+            android:text="@string/task_social_post"/>
+
+        <Button
+            android:id="@+id/b_task_social_post_facebook"
+            style="@style/ShadowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="3dp"
+            android:onClick="handlePostFacebook"
+            android:background="@drawable/button_facebook_states"
+            />
+
+        <Button
+            android:id="@+id/b_task_social_post_google"
+            style="@style/ShadowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="3dp"
+            android:onClick="handlePostGoogle"
+            android:background="@drawable/button_google_states"
+            />
+
+      </LinearLayout>
+
+
+      <Button
+          android:id="@+id/b_task_delete"
+          style="@style/ShadowText"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:minHeight="0dp"
+          android:minWidth="0dp"
+          android:layout_marginTop="15dp"
+          android:background="@drawable/button_delete_background_states"
+          android:onClick="handleDelete"
+          android:gravity="center"
+          android:padding="10dp"
+          android:text="@string/label_task_delete"
+          android:textColor="@color/text"
+          android:textSize="10sp"
+          android:textStyle="bold"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentLeft="true"
+          android:layout_marginTop="15dp"
+          >
+
+        <TextView
+            android:id="@+id/tv_task_social_login"
+            style="@style/NormalLabel"
+            android:text="@string/task_social_login"/>
+
+        <Button
+            android:id="@+id/b_task_social_login_facebook"
+            style="@style/ShadowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="3dp"
+            android:onClick="handleFacebook"
+            android:background="@drawable/button_facebook_states"
+            />
+
+        <Button
+            android:id="@+id/b_task_social_login_google"
+            style="@style/ShadowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="3dp"
+            android:onClick="handleGoogle"
+            android:background="@drawable/button_google_states"
+            />
+
+      </LinearLayout>
+    </RelativeLayout>
+
+  </LinearLayout>
+</ScrollView>

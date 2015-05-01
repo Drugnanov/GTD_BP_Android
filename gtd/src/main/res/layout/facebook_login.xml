@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:paddingBottom="5dp"
+      android:paddingLeft="10dp"
+      android:paddingRight="10dp"
+      android:paddingTop="5dp">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:color="@color/table_text_selector"
+                 android:layout_margin="20dp">
+      <View
+          android:layout_width="fill_parent"
+          android:layout_height="match_parent"
+          android:background="@drawable/rectangle"/>
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:background="@drawable/edit_text_background"
+          android:layout_margin="2dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/facebook_title"
+            android:textColor="@color/table_text_selector"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+
+            >
+
+          <!--android:paddingBottom="10dp"-->
+
+          <com.facebook.login.widget.LoginButton
+              android:id="@+id/b_facebook_login_button"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="30dp"
+              android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+      </RelativeLayout>
+    </FrameLayout>
+  </LinearLayout>
+</ScrollView>
